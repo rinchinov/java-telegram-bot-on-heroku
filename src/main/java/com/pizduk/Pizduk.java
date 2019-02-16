@@ -1,4 +1,4 @@
-package com.pizduk;/*
+/*
  * Copyright 2002-2014 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@ package com.pizduk;/*
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+package com.pizduk;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -21,7 +21,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 
 public class Pizduk extends TelegramLongPollingBot {
-  @Override
+
   public void onUpdateReceived(Update update) {
 
     // We check if the update has a message and the message has text
@@ -41,16 +41,12 @@ public class Pizduk extends TelegramLongPollingBot {
     }
   }
 
-  @Override
   public String getBotUsername() {
-    // Return bot username
-    // If bot username is @MyAmazingBot, it must return 'MyAmazingBot'
     return System.getenv("BOT_NAME");
   }
 
   @Override
   public String getBotToken() {
-    // Return bot token from BotFather
     return System.getenv("BOT_TOKEN");
   }
 }

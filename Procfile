@@ -1,1 +1,1 @@
-web: java -jar target/telegram-bot-1.0.jar
+web: java -cp 'target/pizduk-1.0.jar:target/dependency-jars/*' com.pizduk.Main
